@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Aula Eventos DOM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+    </head>
+    <body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Interação..</div>
+        <script>
+            var a = window.document.getElementsById('area')[0]
+
+            //a.addEventListener('click', clicar)
+            //a.addEventListener('mouseenter', entrar)
+            //a.addEventListener('mouseout', sair)
+
+            function clicar(){
+                //var a = window.document.getElementById('area')
+                a.innerText = 'Clicou!'
+                a.style.background = 'red'
+            }
+
+            function entrar(){
+                var a = window.document.getElementById('area')
+                a.innerText = 'Entrou!'
+                a.style.background = 'blue'
+            }
+
+            function sair(){
+                var a = window.document.getElementById('area')
+                a.innerText = 'Saiu!'
+                a.style.background = 'green'
+            }
+        </script>
+    </body>
+</html>

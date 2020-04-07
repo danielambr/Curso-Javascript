@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Nacionalidade </h1>
+    <form>
+        Informe o seu país de origem: <input type="text" name="textnac" id="textnac">
+        <input type="button" value="verificar" onclick=verifica()>
+    </form>
+    <div id="resposta">
+
+    </div>
+    <script>
+        function verifica(){
+            var t = window.document.getElementById('textnac')
+            var r = window.document.querySelector('div#resposta')
+            
+            r.innerHTML = "Seu país de origem é o(a) " + (t.value).toUpperCase() + ".<br/>"
+            if(t.value == 'Brasil' || t.value == 'brasil'){
+                r.innerHTML += "Você é brasileiro"
+            }else{
+                r.innerHTML += "Você é extrangeiro"
+            }
+        }
+    </script>
+</body>
+</html>
